@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+int	ft_atoi(const char *str)
 {
 	int i;
 	int signe;
@@ -9,15 +9,19 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	signe = 1;
 	somme = 0;
-	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
+	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\r' ||
+			str[i] == '\v' || str[i] == '\f' || str[i] == ' ')
 		i++;
-	if (nptr[i] == '-')
-		signe = -1;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	if (str[i] == '+')
 		i++;
-	while (nptr[i] > 47 && nptr[i] < 58)
+	else if (str[i] == '-')
 	{
-		somme = 10 * somme + (nptr[i] - 48);
+		i++;
+		signe = -1;
+	}
+	while (str[i] > 47 && str[i] < 58)
+	{
+		somme = 10 * somme + (str[i] - 48);
 		i++;
 	}
 	return (somme * signe);
