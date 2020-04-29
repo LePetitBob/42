@@ -1,5 +1,6 @@
 #ifndef LIBFT_H
 # define LIBFT_H
+# include <sys/types.h>
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
