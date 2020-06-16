@@ -6,9 +6,12 @@
 /*   By: vduriez <vduriez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/25 15:35:27 by vduriez           #+#    #+#             */
-/*   Updated: 2020/05/25 15:35:52 by vduriez          ###   ########.fr       */
+/*   Updated: 2020/06/16 15:42:08 by vduriez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+#include <string.h>
 
 int	ft_strlen(const char *s)
 {
